@@ -8,7 +8,7 @@ use App\Domain\User\Service\Create as UserCreate;
 use App\Domain\User\Service\CreateCmd as UserCreateCmd;
 use App\Domain\Auth\ValueObj\AuthAccountType;
 
-readonly final class UserRegisterAndLogin
+readonly final class RegisterAndLogin
 {
     public function __construct(
         private AuthCreate $createAuth,

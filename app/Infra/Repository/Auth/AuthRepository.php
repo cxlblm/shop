@@ -11,4 +11,10 @@ class AuthRepository implements DomainUserRepository
     {
         $user->save();
     }
+
+    public function firstById(int $id): ?Auth
+    {
+        return Auth::where('id', $id)
+            ->first();
+    }
 }

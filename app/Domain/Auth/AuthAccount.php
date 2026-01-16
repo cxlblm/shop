@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property int $id
- * @property int $user_id
+ * @property int $auth_id
  * @property string $account_id
  * @property string $password
  * @property AuthAccountType $type

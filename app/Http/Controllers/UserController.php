@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Application\User\UserRegisterAndLogin;
+use App\Application\User\RegisterAndLogin;
 use App\Domain\Auth\ValueObj\AuthAccountType;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 class UserController
 {
-    public function store(Request $request, UserRegisterAndLogin $registerAndLogin)
+    public function store(Request $request, RegisterAndLogin $registerAndLogin)
     {
         $params = $request->validate([
             'name' => 'required|string',

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('uuid', 36)->unique('uk_uuid');
             $table->string('auth_uuid', 36)->unique('uk_auth_uuid');
+            $table->tinyInteger('status')->default(0);
             $table->unsignedBigInteger('created_at')->default(0);
             $table->unsignedBigInteger('updated_at')->default(0);
         });

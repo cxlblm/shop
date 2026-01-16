@@ -6,6 +6,7 @@ use App\Domain\Auth\AuthAccount;
 use App\Domain\Auth\Repository\AuthAccountRepository;
 use App\Domain\Auth\Repository\AuthRepository;
 use App\Domain\Auth\Auth;
+use App\Domain\Auth\ValueObj\AuthStatus;
 use Str;
 
 readonly final class Create
@@ -25,6 +26,7 @@ readonly final class Create
 
         $auth = new Auth([
             'uuid' => Str::uuid7(),
+            'status' => AuthStatus::Active,
         ]);
 
         $auth->setRelation('loginAccounts', $authAccount);
